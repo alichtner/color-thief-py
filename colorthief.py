@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 """
+July 25, 2015: Editted by Aaron Lichtner
+
     colorthief
     ~~~~~~~~~~
 
@@ -29,14 +31,14 @@ class cached_property(object):
 
 class ColorThief(object):
     """Color thief main class."""
-    def __init__(self, file):
+    def __init__(self, image_array):
         """Create one color thief for one image.
 
         :param file: A filename (string) or a file object. The file object
                      must implement `read()`, `seek()`, and `tell()` methods,
                      and be opened in binary mode.
         """
-        self.image = Image.open(file)
+        self.image = image_array
 
     def get_color(self, quality=10):
         """Get the dominant color.
